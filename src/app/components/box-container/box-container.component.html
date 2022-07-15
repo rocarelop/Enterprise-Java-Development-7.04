@@ -1,0 +1,11 @@
+<div>
+  <div class="box-container">
+      <div *ngFor="let boxItem of boxList, let i=index">
+          <div class="box-item" [ngStyle]="{'background-color': backColorList[i]}" (mouseover)="exchangeColors($event, i)" (mouseout)="exchangeColors($event, i)">
+              <h1 [ngStyle]="{'color': textColor[i]}">Title {{i+1}}</h1>
+              <p [ngStyle]="{'color': textColor[i]}">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+      </div>
+  </div>
+  <button class="button" (click)="changeMode()">Colorblind mode</button>
+</div>
